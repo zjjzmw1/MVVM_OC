@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "HomeView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) HomeView      *homeView;
 
 @end
 
@@ -16,13 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // 初始化页面View
+    [self initHomeView];
+
 }
 
+#pragma mark - 初始化view
+- (void)initHomeView {
+    self.homeView = [[HomeView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.homeView];
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)requestAction {
+    NSString *title = [NSString stringWithFormat:@"刷新后数据为：%d",(int)(arc4random() * 100)];
+    self.homeView.contentLabel.text = title;
+    
 }
 
 

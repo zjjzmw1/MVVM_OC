@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDB694A51E5AC93D006F9F98 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB694A41E5AC93D006F9F98 /* HomeView.m */; };
 		BDF703631E5AC84800A300EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF703621E5AC84800A300EA /* main.m */; };
 		BDF703661E5AC84800A300EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF703651E5AC84800A300EA /* AppDelegate.m */; };
 		BDF703691E5AC84800A300EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF703681E5AC84800A300EA /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDB694A31E5AC93D006F9F98 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		BDB694A41E5AC93D006F9F98 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		BDF7035E1E5AC84800A300EA /* MVVM_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF703621E5AC84800A300EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDF703641E5AC84800A300EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDB6949E1E5AC8D4006F9F98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BDB694A21E5AC8FB006F9F98 /* Controller */,
+				BDB694A01E5AC8EA006F9F98 /* ViewModel */,
+				BDB6949F1E5AC8E3006F9F98 /* View */,
+				BDB694A11E5AC8F4006F9F98 /* Model */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		BDB6949F1E5AC8E3006F9F98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDB694A31E5AC93D006F9F98 /* HomeView.h */,
+				BDB694A41E5AC93D006F9F98 /* HomeView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BDB694A01E5AC8EA006F9F98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		BDB694A11E5AC8F4006F9F98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BDB694A21E5AC8FB006F9F98 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDF703671E5AC84800A300EA /* ViewController.h */,
+				BDF703681E5AC84800A300EA /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		BDF703551E5AC84800A300EA = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +106,7 @@
 			children = (
 				BDF703641E5AC84800A300EA /* AppDelegate.h */,
 				BDF703651E5AC84800A300EA /* AppDelegate.m */,
-				BDF703671E5AC84800A300EA /* ViewController.h */,
-				BDF703681E5AC84800A300EA /* ViewController.m */,
+				BDB6949E1E5AC8D4006F9F98 /* Home */,
 				BDF7036A1E5AC84800A300EA /* Main.storyboard */,
 				BDF7036D1E5AC84800A300EA /* Assets.xcassets */,
 				BDF7036F1E5AC84800A300EA /* LaunchScreen.storyboard */,
@@ -152,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF703691E5AC84800A300EA /* ViewController.m in Sources */,
+				BDB694A51E5AC93D006F9F98 /* HomeView.m in Sources */,
 				BDF703661E5AC84800A300EA /* AppDelegate.m in Sources */,
 				BDF703631E5AC84800A300EA /* main.m in Sources */,
 			);
@@ -310,6 +356,7 @@
 				BDF703771E5AC84800A300EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
