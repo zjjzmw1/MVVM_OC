@@ -39,7 +39,7 @@
     self.homeView = [[HomeView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.homeView];
 }
-
+、
 #pragma mark - 网络请求的方法
 - (void)requestAction {
     __weak typeof(self) wSelf = self;

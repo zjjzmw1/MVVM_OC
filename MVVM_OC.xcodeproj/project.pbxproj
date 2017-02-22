@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1DF0881E5D2C9200FE2A20 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1DF0871E5D2C9200FE2A20 /* HomeViewModel.m */; };
 		BDB694A51E5AC93D006F9F98 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB694A41E5AC93D006F9F98 /* HomeView.m */; };
 		BDF703631E5AC84800A300EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF703621E5AC84800A300EA /* main.m */; };
 		BDF703661E5AC84800A300EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF703651E5AC84800A300EA /* AppDelegate.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1DF0861E5D2C9200FE2A20 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		BD1DF0871E5D2C9200FE2A20 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
 		BDB694A31E5AC93D006F9F98 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		BDB694A41E5AC93D006F9F98 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		BDF7035E1E5AC84800A300EA /* MVVM_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +68,8 @@
 		BDB694A01E5AC8EA006F9F98 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BD1DF0861E5D2C9200FE2A20 /* HomeViewModel.h */,
+				BD1DF0871E5D2C9200FE2A20 /* HomeViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				BDF703691E5AC84800A300EA /* ViewController.m in Sources */,
 				BDB694A51E5AC93D006F9F98 /* HomeView.m in Sources */,
 				BDF703661E5AC84800A300EA /* AppDelegate.m in Sources */,
+				BD1DF0881E5D2C9200FE2A20 /* HomeViewModel.m in Sources */,
 				BDF703631E5AC84800A300EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,4 +13,6 @@
 @property (nonatomic, strong) UIButton      *refreshBtn;    // 刷新按钮
 @property (nonatomic, strong) UILabel       *contentLabel;  // 内容Label
 
+- (void)updateLabel:(NSString *)str;
+
 @end

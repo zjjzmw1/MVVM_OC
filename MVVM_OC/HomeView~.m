@@ -48,8 +48,7 @@
 
 #pragma mark - 更新label的数据
 - (void)updateLabel:(NSString *)str {
-    self.contentLabel.text = str;
-    [self.contentLabel sizeToFit];
+    
 }
 
 @end
