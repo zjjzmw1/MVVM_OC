@@ -1,12 +1,21 @@
 PODS:
   - KVOController (1.2.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - KVOController
+  - ReactiveCocoa (~> 2.5)
 
 SPEC CHECKSUMS:
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: b471937d0bf2627e0f398ab136db92179485ce55
+PODFILE CHECKSUM: 037bc907ade6426b3c25855cac6e1a9fc43555fe
 
 COCOAPODS: 1.0.1

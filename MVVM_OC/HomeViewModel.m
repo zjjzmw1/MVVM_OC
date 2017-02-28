@@ -8,6 +8,8 @@
 
 #import "HomeViewModel.h"
 #import <KVOController/KVOController.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import "HomeModel.h"
 
 @interface HomeViewModel()
@@ -30,11 +32,15 @@
     self.homeModel = model;
 
     // 这里监听更新model的属性
-    [self.KVOController observe:self.homeModel keyPath:@"content" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
-        self.contentString = change[NSKeyValueChangeNewKey];
+//    [self.KVOController observe:self.homeModel keyPath:@"content" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+//        self.contentString = change[NSKeyValueChangeNewKey];
+//    }];
+    // 用RAC的kvo
+    __weak typeof(self) wSelf = self;
+    [RACObserve(self.homeModel, content) subscribeNext:^(id x) {
+        NSLog(@"success===%@",x);
+        wSelf.contentString = x;
     }];
-    
-    
 }
 
 // 这里更新了model的属性

@@ -7,5 +7,6 @@ target ‘MVVM_OC’ do
   use_frameworks!
 
 pod 'KVOController'
-    
+pod 'ReactiveCocoa',                '~> 2.5'        # ReactiveCocoa
+
 end
