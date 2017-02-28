@@ -11,9 +11,10 @@
 
 @interface HomeView : UIView
 
-@property (nonatomic, strong) HomeViewModel *viewModel;
 @property (nonatomic, strong) UIButton      *refreshBtn;    // 刷新按钮
 @property (nonatomic, strong) UILabel       *contentLabel;  // 内容Label
+
+@property (nonatomic, strong) HomeViewModel *viewModel;
 
 - (void)setWithViewModel:(HomeViewModel *)vm;
 

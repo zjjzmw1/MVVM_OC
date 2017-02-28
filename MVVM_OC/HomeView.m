@@ -9,8 +9,6 @@
 #import "HomeView.h"
 #import <KVOController/KVOController.h>
 
-
-
 @implementation HomeView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -44,7 +42,6 @@
         wSelf.contentLabel.text = change[NSKeyValueChangeNewKey];
     }];
 }
-
 
 // 刷新方法
 - (void)refreshAction {

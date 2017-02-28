@@ -28,23 +28,22 @@
 
 - (void)setWithModel:(HomeModel *)model {
     self.homeModel = model;
-    self.contentString = model.content;
+
+    // 这里监听更新model的属性
+    [self.KVOController observe:self.homeModel keyPath:@"content" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+        self.contentString = change[NSKeyValueChangeNewKey];
+    }];
+    
+    
 }
 
+// 这里更新了model的属性
 - (void)refreshAction {
     if ([self.homeModel.content isEqualToString:@"改变后的值"]) {
         self.homeModel.content = @"改变前的值";
     } else {
         self.homeModel.content = @"改变后的值";
     }
-    self.contentString = self.homeModel.content;
-}
-
-
--(void)requestAction:(ResultBlock)resultBlock {
-    int x = arc4random() % 100;
-    NSString *str = [NSString stringWithFormat:@"测试数据的结果是：%d",x];
-    resultBlock(str);
 }
 
 @end

@@ -9,18 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "HomeModel.h"
 
-typedef void(^ResultBlock)(NSString *str);
-
 @interface HomeViewModel : NSObject
-
 
 @property (nonatomic, strong) NSString      *contentString; // 为了和View绑定
 
 - (void)setWithModel:(HomeModel *)model;
 
+// 按钮的刷新方法
 - (void)refreshAction;
-
-- (void)requestAction:(ResultBlock)resultBlock;
-
 
 @end
