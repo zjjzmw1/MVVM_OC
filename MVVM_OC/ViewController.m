@@ -9,11 +9,13 @@
 #import "ViewController.h"
 #import "HomeView.h"
 #import "HomeViewModel.h"
+#import "HomeModel.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) HomeView      *homeView;
 @property (nonatomic, strong) HomeViewModel *homeViewModel;
+@property (nonatomic, strong) HomeModel     *homeModel;
 
 @end
 
@@ -22,31 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.homeViewModel = [[HomeViewModel alloc] init];
-    
-    // 初始化页面View
-    [self initHomeView];
-
-}
-
-#pragma 触发请求的方法
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self requestAction];
-}
-
-#pragma mark - 初始化view
-- (void)initHomeView {
     self.homeView = [[HomeView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.homeView];
+    
+    self.homeViewModel = [[HomeViewModel alloc] init];
+    self.homeModel   = [[HomeModel alloc] init];
+    
+    // 建立绑定关系
+    [self.homeViewModel setWithModel:self.homeModel];
+    [self.homeView setWithViewModel:self.homeViewModel];
 }
 
-#pragma mark - 网络请求的方法
-- (void)requestAction {
-    __weak typeof(self) wSelf = self;
-    [self.homeViewModel requestAction:^(NSString *str) {
-        [wSelf.homeView updateLabel:str];
-    }];
-}
 
 
 @end

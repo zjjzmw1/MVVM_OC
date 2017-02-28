@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HomeModel.h"
 
 typedef void(^ResultBlock)(NSString *str);
 
 @interface HomeViewModel : NSObject
 
+
+@property (nonatomic, strong) NSString      *contentString; // 为了和View绑定
+
+- (void)setWithModel:(HomeModel *)model;
+
+- (void)refreshAction;
+
 - (void)requestAction:(ResultBlock)resultBlock;
+
 
 @end
